@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" href="create-coupon.component.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="centerH2">
+      <div class="input-group" style=" margin-bottom: 1%;">
+        <h2 style="color:blue;">
+          Coupon creation
+        </h2>
+        <p class="alert alert-danger" role="alert">Attention! All fields must be filled in.</p>
+      </div>
+    </div>
+
+
+    <div class="inputBlock">
+      <div class="input-group">
+        <div>
+          <small style="color:black;">ID: </small>
+          <input class="form-control" type="number" name="couponID" value="{{idCount}}" disabled style=" margin-bottom: 5%;">
+        </div>
+        <div>
+          <small style="color:black;">Title: </small>
+          <input class="form-control" type="text" name="couponTitle" placeholder="fill in the subject of the coupon" required [(ngModel)]="coupon.title"
+            style=" margin-bottom: 5%;">
+        </div>
+        <div>
+          <small style="color:black;">Valid since: </small>
+          <input class="form-control" type="date" name="startDate" [(ngModel)]="coupon.startDate" style=" margin-bottom: 5%;">
+        </div>
+
+        <div>
+          <small style="color:black;">Expired date: </small>
+          <input class="form-control" type="date" name="endtDate" required [(ngModel)]="coupon.endDate" style=" margin-bottom: 5%;">
+        </div>
+
+        <div>
+          <small style="color:black;">Type: </small>
+          <select class="form-control" name="type" required [(ngModel)]="coupon.type" style=" margin-bottom: 5%;">
+            <option value="FOOD">FOOD</option>
+            <option value="HEALTH">HEALTH</option>
+            <option value="SPORTS">SPORTS</option>
+            <option value="CAMPING">CAMPING</option>
+            <option value="TRAVELLING">TRAVELLING</option>
+            <option value="ELECTRICITY">ELECTRICITY</option>
+            <option value="RESTURANS">RESTURANS</option>
+          </select>
+        </div>
+
+        <div>
+          <small style="color:black;">Amount: </small>
+          <input class="form-control" type="number" name="amount" min="10" required [(ngModel)]="coupon.amount" style=" margin-bottom: 5%;">
+        </div>
+
+        <div>
+          <small style="color:black;">Details: </small>
+          <textarea class="form-control" name="message" placeholder="fill in the coupon's details" [(ngModel)]="coupon.message" style=" margin-bottom: 5%;"></textarea>
+        </div>
+
+        <div>
+          <small style="color:black;">Price: </small>
+          <input class="form-control" type="number" name="price" min="20" required [(ngModel)]="coupon.price" style=" margin-bottom: 5%;">
+        </div>
+
+        <div>
+          <small style="color:black;">Image: </small>
+          <a href="https://www.remkes.com/wp-content/uploads/2016/04/printable-coupons.jpg">
+            <br>
+            <sub>* Google it and find a picture. Then, paste the path(of JPG file) into the line above.</sub>
+          </a>
+          <input class="form-control" type="text" [(ngModel)]="coupon.image" style=" margin-bottom: 5%;">
+        </div>
+
+
+        <div>
+          <button class="btn btn-primary" (click)="createCoupon()">create</button>
+        </div>
+      </div>
+    </div>
+    <!-- END of input block -->
+
+  </div>
+  <!-- END of div class page -->
+</body>
+
+</html>

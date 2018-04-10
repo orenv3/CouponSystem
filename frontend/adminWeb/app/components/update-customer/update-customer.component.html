@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="centerH2">
+      <h2>
+        Update customer
+      </h2>
+      <p style="color: black;">
+        <strong> customers list: </strong>
+      </p>
+    </div>
+
+    <div class="list-group" *ngFor="let c of allCustomers" style=" margin-left: 20%; margin-right: 20%; margin-bottom: 4%;">
+      <a class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between" style="margin-bottom:2%;">
+          <small class="text-muted">id: {{c.id}}</small>
+          <br>
+          <h4 class="mb-1">Name: {{c.name}}</h4>
+          <sub>enter new password</sub>
+          <input class="form-control" type="text" [(ngModel)]="c.password">
+          <br>
+          <button class="btn btn-primary" (click)="setTheCustomer(c)">edit</button>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="centerH2">
+      <div class="input-group" style=" margin-bottom: 1%;">
+        <h2>Customer details</h2>
+        <small style="color:black;">customer ID: </small>
+        <input class="form-control" type="number" required min="1" [(ngModel)]=_idCust style=" margin-bottom: 2%; text-align: center;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="getCustomer()">fetch</button>
+      </div>
+    </div>
+
+    <div class="list-group" style=" margin-left: 20%; margin-right: 20%;">
+      <a class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+          <small class="text-muted">ID: {{_customer.id}}</small>
+          <br>
+          <h4 class="mb-1">Name: {{_customer.name}}</h4>
+          <h5 class="mb-1">Password: {{_customer.password}}</h5>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

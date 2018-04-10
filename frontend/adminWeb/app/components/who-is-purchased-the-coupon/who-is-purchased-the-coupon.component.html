@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="centerH2">
+      <div class="input-group" style=" margin-bottom: 1%;">
+        <h2>Customers list by coupon</h2>
+        <p style="color: black;">
+          <strong>please enter coupon number in order to find the buyers: </strong>
+        </p>
+        <input class="form-control" type="number" min="1" required [(ngModel)]="custId">
+      </div>
+      <button class="btn btn-primary" (click)="WhoIs_purchasedTheCoupon()">find</button>
+    </div>
+
+    <div class="list-group" *ngFor="let cust of customers" style=" margin-left: 20%; margin-right: 20%;">
+      <a class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+          <small class="text-muted">ID: {{cust.id}}</small>
+          <br>
+          <h4 class="mb-1">Name: {{cust.name}}</h4>
+          <h5 class="mb-1">Password: {{cust.password}}</h5>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

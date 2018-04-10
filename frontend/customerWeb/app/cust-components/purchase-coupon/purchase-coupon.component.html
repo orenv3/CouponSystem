@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="centerH2">
+      <h2 class="blue2">Enjoy from our coupons</h2>
+    </div>
+
+    <div class="list-group" *ngFor="let c of generalCoupons" style=" margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
+      <a class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+          <h4 class="mb-1">{{c.title}}</h4>
+          <h5 class="mb-1">Type: {{c.type}}</h5>
+          <small class="text-muted">id: {{c.id}}</small>
+          <br>
+          <small class="text-muted">since: {{c.startDate}}</small>
+          <br>
+          <small class="text-muted">expired: {{c.endDate}}</small>
+        </div>
+        <span>
+          <img src="{{c.image}}">
+        </span>
+        <br>
+        <small class="text-muted">{{c.amount}} available</small>
+        <p dir="rtl" class="mb-1">{{c.message}}</p>
+        <h2 class="mb-1">just {{c.price}}$</h2>
+        <span>
+          <button class="btn btn-primary" (click)="setThisCoupon(c)">BUY</button>
+        </span>
+      </a>
+    </div>
+
+    <!--class page -->
+  </div>
+</body>
+
+</html>

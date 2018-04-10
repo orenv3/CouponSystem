@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="centerH2">
+            <div class="input-group" style=" margin-bottom: 1%;">
+                <h2>
+                    list by id
+                </h2>
+                <p style="color: black;">
+                    <strong> Please enter coupon ID in order to view the his details: </strong>
+                </p>
+
+                <small style="color: black;">ID:</small>
+                <input class="form-control" type="number" min="1" required [(ngModel)]="_id">
+                <br>
+            </div>
+            <p>
+                <button class="btn btn-primary" (click)="getCoupon()">details</button>
+            </p>
+        </div>
+
+
+        <div class="list-group" style=" margin-left: 10%; margin-right: 10%;" *ngIf="valid">
+            <a class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h4 class="mb-1">{{_coupon.title}}</h4>
+                    <h5 class="mb-1">Type: {{_coupon.type}}</h5>
+                    <small class="text-muted">id: {{_coupon.id}}</small>
+                    <br>
+                    <small class="text-muted">since: {{_coupon.startDate}}</small>
+                    <br>
+                    <small class="text-muted">expired: {{_coupon.endDate}}</small>
+                </div>
+                <span>
+                    <img src="{{_coupon.image}}">
+                </span>
+                <br>
+                <small class="text-muted">{{_coupon.amount}} available</small>
+                <p dir="rtl" class="mb-1">{{_coupon.message}}</p>
+                <h2 class="mb-1">just {{_coupon.price}}$</h2>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

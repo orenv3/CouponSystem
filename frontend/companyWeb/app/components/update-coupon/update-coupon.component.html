@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+    <div class="centerH2">
+        <div class="input-group" style=" margin-bottom: 1%;">
+            <h2>
+                Update your coupons:
+            </h2>
+        </div>
+    </div>
+
+
+    <div class="list-group" *ngFor="let c of _coupons" style=" margin-left: 10%; margin-right: 10%; margin-bottom: 4%;">
+        <a class="list-group-item list-group-item-action flex-column align-items-start ">
+            <div class="d-flex w-100 justify-content-between">
+                
+                <h4 class="mb-1">{{c.title}}</h4>
+                <h5 class="mb-1">Type: {{c.type}}</h5>
+                <small class="text-muted">ID: {{c.id}}</small>
+                <br>
+                <small class="text-muted">since: {{c.startDate}}</small>
+                <br>
+                <sub>expired date:</sub>
+                <input type="date" class="form-control" [(ngModel)]="c.endDate" >
+                <small class="text-muted">expired: {{c.endDate}}</small>
+                
+            </div>
+
+            <div>
+                <sub>
+                    <a href="https://www.google.co.il/search?hl=iw&tbm=isch&source=hp&biw=1366&bih=637&ei=hvmDWuuLGITLwQLcvZ4g&q=%D7%94%D7%A0%D7%97%D7%95%D7%AA&oq=vbju%2C&gs_l=img.3.0.0i1k1l4.5343.6553.0.7911.8.8.0.0.0.0.212.774.0j4j1.5.0....0...1ac.1.64.img..3.5.771.0..0.0.uuNoMFKoqrY#imgrc=AFAbeNyZW2md2M:">
+                        do you want to change the image?
+                    </a>
+                </sub>
+                <input class="form-control" required type="text" value="{{c.image}}" [(ngModel)]="c.image" style=" margin-bottom: 1%; width:90%; text-align: left;">
+                <span>
+                    <br>
+                    <img src="{{c.image}}">
+                </span>
+            </div>
+            <br>
+
+            <div style=" margin-bottom: 2%;">
+                <sub>amount:</sub>
+                <input required class="form-control" type="number" min="{{c.amount}}" value="{{c.amount}}" [(ngModel)]="c.amount">
+                <small class="text-muted">{{c.amount}} available</small>
+            </div>
+
+            <sub>details:</sub>
+            <textarea class="form-control" style="resize:none" dir="rtl" [(ngModel)]="c.message"> 
+                    {{c.message}}
+                </textarea>
+
+                <sub>price:</sub>
+                <input required class="form-control" type="number" value="{{c.price}}" [(ngModel)]="c.price" > 
+                <h2 class="mb-1">just {{c.price}}$</h2>
+
+            <button class="btn btn-primary" (click)="setCoupon2Update(c)" style="margin-top: 2%;">edit</button>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.page {
+  font-family: 'Arial', 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif';
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: blue;
+}
+
+.centerH2 {
+  position: relative;
+  margin-left: 30%;
+  margin-right: 20%;
+  margin-top: 1%;
+  margin-bottom: auto;
+}
+

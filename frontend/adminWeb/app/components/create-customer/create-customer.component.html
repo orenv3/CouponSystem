@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="centerH2">
+      <div class="input-group" style=" margin-bottom: 1%;">
+        <h2>Customer creation</h2>
+        <h4 class="alert alert-danger" role="alert">There are mandatory fileds</h4>
+        <div>
+          <small style="color:black;">* Id: </small>
+          <input class="form-control" type="number" name="custId" value="{{newCustomerId}}" disabled>
+        </div>
+        <div>
+          <small style="color:black;">* Name: </small>
+          <input class="form-control" type="name" value="customer name" name="custName" required [(ngModel)]=_customer.name>
+        </div>
+
+        <div>
+          <small style="color:black;">* Password: </small>
+          <input class="form-control" type="text" name="custPassword" required [(ngModel)]=_customer.password>
+        </div>
+
+      </div>
+      <button class="btn btn-primary" (click)="createCustomer()">create customer</button>
+      <br>
+      <sub style="color:black">* required fields</sub>
+    </div>
+  </div>
+</body>
+
+</html>

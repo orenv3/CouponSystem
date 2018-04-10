@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="centerH2">
+      <h2>
+        Company deletion
+      </h2>
+      <p style="color: black;">
+        <strong>company list: </strong>
+      </p>
+    </div>
+
+    <div class="list-group" *ngFor="let c of _companies" style=" margin-left: 20%; margin-right: 20%; margin-bottom: 2%;">
+      <a class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between" style="margin-bottom:2%">
+          <small class="text-muted">ID: {{c.id}}</small>
+          <br>
+          <h4 class="mb-1">Name: {{c.name}}</h4>
+          <h5 class="mb-1">Password: {{c.password}}</h5>
+          <small class="text-muted">Email: {{c.email}}</small>
+        </div>
+        <button class="btn btn-primary" (click)="setTheCompany(c)">remove</button>
+      </a>
+    </div>
+
+  </div> 
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.page {
+  font-family: 'Arial', 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif';
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: blue;
+}
+
+.centerH2 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+img {
+  width: 40%;
+  height: 30%;
+}
+
+a:hover {
+  background-color: rgb(178, 178, 250);
+}

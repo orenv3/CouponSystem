@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/showCustomerProfile">show my profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/purchaseCoupon">purchase coupons</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getAllpurchaseCouponsByType">coupons list(by type)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getAllpurchasedCouponsByMaxPrice">coupons list(by price)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getCouponsTillDate">coupons list(by date)</a>
+    </li>
+    <li class="nav-item">
+      <a href="http://ec2-18-216-14-107.us-east-2.compute.amazonaws.com:8080/OCS2/logout/" class="btn btn-primary" role="button">logout</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</body>
+
+</html>

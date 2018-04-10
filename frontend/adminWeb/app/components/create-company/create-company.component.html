@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="centerH2">
+      <div class="input-group" style=" margin-bottom: 1%;">
+        <h2>Company creation</h2>
+        <h4 class="alert alert-danger" role="alert">There are mandatory fileds</h4>
+        <div>
+          <small style="color:black;">* Id: </small>
+          <input class="form-control" type="number" name="compId" value="{{newCompanyID}}" disabled>
+        </div>
+        <div>
+          <small style="color:black;">* Name: </small>
+          <input class="form-control" type="name" name="compName" value="company name" required [(ngModel)]=_company.name>
+        </div>
+
+        <div>
+          <small style="color:black;">* Password: </small>
+          <input class="form-control" type="text" name="compPassword" required [(ngModel)]=_company.password>
+        </div>
+
+        <div>
+          <small style="color:black;">Email</small>
+          <input class="form-control" type="email" name="compEmail" required [(ngModel)]=_company.email>
+        </div>
+
+
+      </div>
+      <button class="btn btn-primary" (click)="createCompany()">create company</button>
+      <br>
+      <sub style="color:black">* required fields</sub>
+    </div>
+
+  </div>
+</body>
+
+</html>

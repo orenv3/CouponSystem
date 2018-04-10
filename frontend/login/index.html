@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="indexCss.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  $(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+ </script> 
+</head>
+
+<body>
+  <div class="backgroundImage">
+    <div class="center">
+      <h1 align="center" style="margin-bottom:15%; margin-top:15%;">Welcome to Oren's Coupon System</h1>
+      <div class="alert alert-success">
+        This is a coupon management system which allows coupon management for companies and customers.  
+    </div>
+      <form class="animated  example slideInUp" action="http://localhost:8080/login_servlet/" id="logID" method="post">
+        <div class="form-group">
+          <label for="clientType"> * Client type: </label>
+          <select name="clientsType" class="w3-input" data-toggle="tooltip" data-placement="top" title="Please choose client type" aria-describedby=tooltip622435 >
+            <option value="ADMIN">ADMIN</option>
+            <option value="COMPANY" selected="selected" >COMPANY</option>
+            <option value="CUSTOMER">CUSTOMER</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name"> * User name: </label>
+          <input class="form-control" type="text" name="name" placeholder="Type the user name: company-1 or customer-1" data-toggle="tooltip" data-placement="top" title="Type the user name: company-1 or customer-1" aria-describedby=tooltip622435 >
+        </div>
+
+        <div class="form-group">
+          <label for="passowrd"> * Password: </label>
+          <input class="form-control" type="password" name="password" placeholder="Type the word: &quot;password&quot;" data-toggle="tooltip" data-placement="top" title="Type the word: &quot;password&quot;" aria-describedby=tooltip622435  >
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button2" value="sign in">
+          <br>
+          <sub>* required field </sub>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>
+

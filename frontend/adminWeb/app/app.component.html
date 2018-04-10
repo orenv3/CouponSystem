@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+  <!-- /////////////////////////////customer////////////////////////////////// -->
+  <ul class="nav nav-pills nav-fill" style=" background-color: rgb(41, 37, 31);">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/createCustomer">customer creation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/updateCustomer">update customer</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/removeCustomer">customer deletion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getAllCustomers">customers list</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getCustomer">customer details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/removeCustomerCoupon">customer's coupon deletion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/WhoIs_purchasedTheCoupon">customers by coupon</a>
+    </li>
+    
+    <li class="nav-item">
+      <a href="http://ec2-18-216-14-107.us-east-2.compute.amazonaws.com:8080/OCS2/logout/" class="btn btn-primary" role="button">logout</a>
+    </li>
+  </ul>
+  
+  <!-- /////////////////////////////company////////////////////////////////// -->
+  <ul class="nav nav-pills nav-fill" style=" background-color: rgb(49, 45, 38);">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/createCompany">company creation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/updateCompany">updtae company</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/removeCompany">company deletion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getAllCompanies">companies list</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/getCompany">company details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/WhoIs_couponOwner">coupon owner</a>
+    </li>
+  </ul>
+  
+  <router-outlet></router-outlet>
+</body>
+
+</html>
